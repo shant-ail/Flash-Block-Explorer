@@ -1,14 +1,4 @@
-George Brown College - Blockchain Development T175
-
-BCDV1021 - Frontend || Full Stack - 1
-
 ## Flash Blockchain Explorer Application
-
-Team Members : <br/>
-
-Surya Pranesh Krishnan - 101442686 <br/>
-Shanthanu Ail - <br/>
-
 <br/>
   Instructions : <br/>
   <br/>
