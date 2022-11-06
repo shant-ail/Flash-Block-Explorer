@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import Transactions from "./components/Transactions";
+import Addresses from "./components/Addresses";
+import Wallet from "./components/Wallet";
+import Transfer from "./components/Transfer";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="main">
+        <Navigation />
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Transactions />} exact />
+            <Route path="/transactions" element={<Transactions />} />
+            <Route path="/addresses" element={<Addresses />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/transfer/:address" element={<Transfer />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
